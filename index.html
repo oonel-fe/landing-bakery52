@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery52 - Pan Artesano</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Nerko+One&display=swap" rel="stylesheet">
+    
+    <!-- Configuración personalizada -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bakery: {
+                            bg: '#fffaee',
+                            blue: '#285cac',
+                            orange: '#f74621',
+                            orangeHover: '#d63a1b',
+                            blueHover: '#1e4685'
+                        }
+                    },
+                    fontFamily: {
+                        title: ['"Nerko One"', 'cursive'],
+                        body: ['"EB Garamond"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-body min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden bg-bakery-bg">
+
+    <!-- FONDO -->
+    <div class="fixed inset-0 z-0">
+        <!-- Archivo requerido: fondo.jpg -->
+        <img src="./fondo.jpg" 
+             class="w-full h-full object-cover blur-sm scale-105 opacity-40" 
+             alt="Fondo Pan Artesano">
+        <div class="absolute inset-0 bg-[#fffaee]/80"></div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="relative z-10 w-full max-w-sm text-center flex flex-col gap-6 pt-6 pb-10">
+        
+        <!-- HEADER -->
+        <header>
+            <!-- Archivo requerido: logo.png -->
+            <img src="./logo.png" 
+                 alt="Logo Bakery52" 
+                 class="w-32 mx-auto mb-4 drop-shadow-sm">
+            
+            <h2 class="text-xl font-medium text-bakery-blue tracking-wide border-b border-bakery-orange/40 inline-block pb-1">
+                Larga fermentación. · Pan artesano.
+            </h2>
+        </header>
+
+        <!-- SECCIÓN DE PEDIDO CON FOTOS -->
+        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-4 shadow-xl border border-white/50">
+            
+            <p class="text-bakery-orange font-bold text-xs uppercase tracking-widest mb-3">
+                Disponibles hoy para reserva
+            </p>
+
+            <!-- CARRUSEL -->
+            <div class="flex overflow-x-auto space-x-3 pb-4 no-scrollbar snap-x">
+                
+                <!-- Jala M -->
+                <div class="snap-center shrink-0 w-32 h-32 rounded-xl overflow-hidden shadow-md border-2 border-white bg-white">
+                    <img src="./jala-m.png" alt="Jalá M" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Jala L -->
+                <div class="snap-center shrink-0 w-32 h-32 rounded-xl overflow-hidden shadow-md border-2 border-white bg-white">
+                    <img src="./jala-l.png" alt="Jalá L" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Jala XL -->
+                <div class="snap-center shrink-0 w-32 h-32 rounded-xl overflow-hidden shadow-md border-2 border-white bg-white">
+                    <img src="./jala-xl.png" alt="Jalá XL" class="w-full h-full object-cover">
+                </div>
+                
+            </div>
+
+            <!-- BOTÓN PRINCIPAL -->
+            <div class="mt-2">
+                <p class="text-bakery-blue text-xs mb-2 font-semibold">
+                    ¡Capacidad limitada, no esperes!
+                </p>
+                <a href="https://pedidos.bakery52.com/" target="_blank" 
+                   class="block w-full bg-bakery-orange hover:bg-bakery-orangeHover text-white font-title text-2xl py-3 rounded-xl shadow-lg transform hover:scale-[1.02] transition-all duration-300">
+                    ¡Reserva Ahora!
+                </a>
+            </div>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="flex flex-col gap-4 mt-2 px-2">
+            
+            <!-- INSTAGRAM -->
+            <div class="group">
+                <p class="text-bakery-blue/80 font-medium text-xs mb-1">
+                    Novedades y horneadas
+                </p>
+                <a href="https://instagram.com/bakery52" target="_blank" 
+                   class="block w-full bg-bakery-blue hover:bg-bakery-blueHover text-white font-title text-xl py-2.5 rounded-lg shadow-md transition-all duration-300">
+                    Instagram
+                </a>
+            </div>
+
+            <!-- WHATSAPP -->
+            <div class="group">
+                <p class="text-bakery-blue/80 font-medium text-xs mb-1">
+                    Comunidad Exclusiva
+                </p>
+                <a href="https://chat.whatsapp.com/D14GivbbaQB9EX1OARC1V4" target="_blank" 
+                   class="block w-full bg-bakery-blue hover:bg-bakery-blueHover text-white font-title text-xl py-2.5 rounded-lg shadow-md transition-all duration-300">
+                    Unirme al Grupo
+                </a>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="mt-8">
+            <p class="text-[10px] font-bold text-bakery-blue/40 tracking-widest uppercase">
+                © 2026 Bakery52
+            </p>
+        </footer>
+
+    </main>
+</body>
+</html>
