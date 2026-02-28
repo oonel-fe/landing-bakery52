@@ -1,0 +1,21 @@
+# ============================================================
+#  BAKERY52 — Cabeceras de seguridad HTTP
+#  Fichero: _headers (debe estar en la raíz del repo)
+# ============================================================
+
+# Se aplica a todas las páginas del sitio
+/*
+  # Evita que tu web se cargue dentro de un iframe en otra web (anti-clickjacking)
+  X-Frame-Options: SAMEORIGIN
+
+  # Evita que el navegador "adivine" el tipo de archivo (anti-sniffing)
+  X-Content-Type-Options: nosniff
+
+  # Controla qué info se comparte al salir de tu web
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Bloquea acceso a cámara, micrófono y geolocalización
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+  # Fuerza HTTPS durante 1 año (solo actívalo cuando todo funcione bien con HTTPS)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

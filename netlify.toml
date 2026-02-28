@@ -1,0 +1,22 @@
+# ============================================================
+#  BAKERY52 — Configuración Netlify
+#  Fichero: netlify.toml (debe estar en la raíz del repo)
+# ============================================================
+
+# Configuración de publicación
+[build]
+  publish = "."        # Publica desde la raíz del repo
+  command = ""         # Sin comando de build (web estática pura)
+
+# Redirecciones: fuerza HTTPS siempre
+[[redirects]]
+  from = "http://bakery52.com/*"
+  to   = "https://bakery52.com/:splat"
+  status = 301
+  force  = true
+
+[[redirects]]
+  from = "http://www.bakery52.com/*"
+  to   = "https://bakery52.com/:splat"
+  status = 301
+  force  = true
